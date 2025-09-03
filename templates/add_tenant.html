@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Tenant</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+<nav>
+    <div class="logo">MultiTenantDashboard</div>
+    <ul>
+        <li><a href="/">Dashboard</a></li>
+        <li><a href="/tenants">Manage Tenants</a></li>
+    </ul>
+</nav>
+</header>
+
+<section class="add-tenant">
+<form method="POST">
+    <label>Name:</label>
+    <input type="text" name="name" required>
+    <label>Users:</label>
+    <input type="number" name="users" required>
+    <label>Active Sessions:</label>
+    <input type="number" name="active" required>
+    <button type="submit" class="btn">Add Tenant</button>
+</form>
+</section>
+</body>
+</html>

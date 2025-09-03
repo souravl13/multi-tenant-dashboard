@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi-Tenant Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/static/scripts.js" defer></script>
+</head>
+<body>
+<header>
+<nav>
+    <div class="logo">MultiTenantDashboard</div>
+    <ul>
+        <li><a href="/">Dashboard</a></li>
+        <li><a href="/tenants">Manage Tenants</a></li>
+    </ul>
+</nav>
+</header>
+
+<section class="dashboard">
+    {% for tenant in tenants %}
+    <div class="tenant-card">
+        <h2>{{ tenant.name }}</h2>
+        <p>Users: {{ tenant.users }}</p>
+        <p>Active Sessions: {{ tenant.active }}</p>
+        <canvas id="chart{{ loop.index }}" width="200" height="100"></canvas>
+    </div>
+    {% endfor %}
+</section>
+
+<script>
+const tenants = {{ tenants|tojson }};
+</script>
+</body>
+</html>

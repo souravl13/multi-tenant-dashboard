@@ -1,0 +1,14 @@
+body { font-family: Arial, sans-serif; background-color: #1e1e2f; color: #fff; margin: 0; }
+header nav { display: flex; justify-content: space-between; align-items: center; padding: 15px; background-color: #111; }
+header nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
+header nav ul li { margin-left: 20px; }
+header nav ul li a { color: #ffd700; text-decoration: none; font-weight: bold; }
+.dashboard { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+.tenant-card { background: #2e2e3f; padding: 15px; border-radius: 10px; width: 200px; text-align: center; }
+.btn { padding: 10px 15px; background-color: #ffd700; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; color: #000; }
+table { width: 80%; margin: 20px auto; border-collapse: collapse; }
+th, td { border: 1px solid #fff; padding: 10px; text-align: center; }
+th { background-color: rgba(255, 215, 0, 0.2); }
+.btn-delete { color: red; text-decoration: none; font-weight: bold; }
+.add-tenant form { width: 300px; margin: 50px auto; display: flex; flex-direction: column; gap: 15px; }
+.add-tenant input { padding: 8px; border-radius: 5px; border: none; }
